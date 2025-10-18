@@ -47,7 +47,6 @@ export default function Page() {
             description="Revolutionize your operations with our cutting-edge SaaS solutions."
             imagePosition="right"
             imageSrc={assetMap.find(a => a.id === 'hero-image')?.url || '/public/images/placeholder.webp'}
-            alt={assetMap.find(a => a.id === 'hero-image')?.alt || 'Tech workspace'}
             buttons={[
               { text: "Get Started", href: "https://example.com" },
               { text: "Learn More", href: "about" }
@@ -85,9 +84,9 @@ export default function Page() {
             title="Our Team"
             description="Meet the people who make innovation possible."
             members={[
-              { id: "1", name: "Alex Johnson", role: "CEO", imageSrc: assetMap.find(a => a.id === 'team-1')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-1')?.alt || '' },
-              { id: "2", name: "Lisa Brown", role: "CTO", imageSrc: assetMap.find(a => a.id === 'team-2')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-2')?.alt || '' },
-              { id: "3", name: "Michael Smith", role: "Lead Developer", imageSrc: assetMap.find(a => a.id === 'team-3')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-3')?.alt || '' }
+              { id: "1", name: "Alex Johnson", role: "CEO", imageSrc: assetMap.find(a => a.id === 'team-1')?.url || '/public/images/placeholder.webp' },
+              { id: "2", name: "Lisa Brown", role: "CTO", imageSrc: assetMap.find(a => a.id === 'team-2')?.url || '/public/images/placeholder.webp' },
+              { id: "3", name: "Michael Smith", role: "Lead Developer", imageSrc: assetMap.find(a => a.id === 'team-3')?.url || '/public/images/placeholder.webp' }
             ]}
           />
         </div>
@@ -98,10 +97,10 @@ export default function Page() {
             title="What Our Clients Say"
             description="See how our solutions have transformed businesses."
             testimonials={[
-              { id: "1", name: "Chris Evans", role: "Product Manager", company: "Tech Solutions Inc.", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-1')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-1')?.alt || '' },
-              { id: "2", name: "Patricia Hughes", role: "Project Lead", company: "InnovateLab", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-2')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-2')?.alt || '' },
-              { id: "3", name: "Ryan Lee", role: "CEO", company: "GrowthTech", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-3')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-3')?.alt || '' },
-              { id: "4", name: "Emily Clark", role: "CTO", company: "Enterprise Hub", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-4')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-4')?.alt || '' }
+              { id: "1", name: "Chris Evans", role: "Product Manager", company: "Tech Solutions Inc.", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-1')?.url || '/public/images/placeholder.webp' },
+              { id: "2", name: "Patricia Hughes", role: "Project Lead", company: "InnovateLab", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-2')?.url || '/public/images/placeholder.webp' },
+              { id: "3", name: "Ryan Lee", role: "CEO", company: "GrowthTech", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-3')?.url || '/public/images/placeholder.webp' },
+              { id: "4", name: "Emily Clark", role: "CTO", company: "Enterprise Hub", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-4')?.url || '/public/images/placeholder.webp' }
             ]}
           />
         </div>
