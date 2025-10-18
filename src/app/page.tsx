@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
@@ -9,7 +9,7 @@ import TeamCardThree from '@/components/sections/team/TeamCardThree';
 import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
 import ContactCenterForm from '@/components/sections/contact/ContactCenterForm';
 import FooterBaseReveal from '@/components/sections/footer/FooterBaseReveal';
-import { Analytics, Shield, Users } from "lucide-react";
+import { Shield, Users } from "lucide-react";
 
 const assetMap = [
   {"id":"hero-image","url":"https://images.pexels.com/photos/11167645/pexels-photo-11167645.jpeg?auto=compress&cs=tinysrgb&h=650&w=940","alt":"Dynamic portrait with swirling neon lights creating an ethereal and futuristic vibe."},
@@ -33,112 +33,104 @@ export default function Page() {
       defaultTextAnimation="entrance-slide"
       borderRadius="pill"
     >
-      <div id="nav" data-section="nav">
+      <div id="nav" data-section="nav" className="scroll-mt-24">
         <NavbarStyleMinimal
           logoSrc="/brand/logowhite.svg"
           logoAlt="Logo"
           brandName="SaaS Co."
         />
       </div>
-
-      <div id="hero" data-section="hero" className={"scroll-mt-24 "+(plan.sectionStyles.hero?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.hero?.containerClasses ?? "")}>
+      <div id="hero" data-section="hero" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <HeroSplit
             title="Empower Your Business"
             description="Revolutionize your operations with our cutting-edge SaaS solutions."
             imagePosition="right"
-            imageSrc={assetMap.find(a => a.id === 'hero-image')?.url ?? '/public/images/placeholder.webp'}
-            alt={assetMap.find(a => a.id === 'hero-image')?.alt ?? 'Tech workspace'}
+            imageSrc={assetMap.find(a => a.id === 'hero-image')?.url || '/public/images/placeholder.webp'}
+            alt={assetMap.find(a => a.id === 'hero-image')?.alt || 'Tech workspace'}
             buttons={[
-              {text: "Get Started", href: "https://example.com"},
-              {text: "Learn More", href: "about"}
+              { text: "Get Started", href: "https://example.com" },
+              { text: "Learn More", href: "about" }
             ]}
           />
         </div>
       </div>
-
-      <div id="about" data-section="about" className={"scroll-mt-24 "+(plan.sectionStyles.about?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.about?.containerClasses ?? "")}>
+      <div id="about" data-section="about" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <TextAbout
             title="We build software that powers innovation and growth."
             buttons={[
-              {text: "Get Started", href: "https://example.com"},
-              {text: "Learn More", href: "about"}
+              { text: "Get Started", href: "https://example.com" },
+              { text: "Learn More", href: "about" }
             ]}
           />
         </div>
       </div>
-
-      <div id="feature" data-section="feature" className={"scroll-mt-24 "+(plan.sectionStyles.feature?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.feature?.containerClasses ?? "")}>
+      <div id="feature" data-section="feature" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <FeatureCardTwo
             title="Explore Our Features"
             description="Discover capabilities that drive success"
             features={[
-              {title: "Advanced Analytics", description: "Gain insights with our powerful analytics tools.", icon: Analytics},
-              {title: "Secure and Reliable", description: "Enhanced security features for peace of mind.", icon: Shield},
-              {title: "Collaborative Tools", description: "Facilitate teamwork with integrated solutions.", icon: Users}
+              { title: "Advanced Analytics", description: "Gain insights with our powerful analytics tools.", icon: Shield },
+              { title: "Secure and Reliable", description: "Enhanced security features for peace of mind.", icon: Shield },
+              { title: "Collaborative Tools", description: "Facilitate teamwork with integrated solutions.", icon: Users }
             ]}
           />
         </div>
       </div>
-
-      <div id="team" data-section="team" className={"scroll-mt-24 "+(plan.sectionStyles.team?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.team?.containerClasses ?? "")}>
+      <div id="team" data-section="team" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <TeamCardThree
             title="Our Team"
             description="Meet the people who make innovation possible."
             members={[
-              {id: "1", name: "Alex Johnson", role: "CEO", imageSrc: assetMap.find(a => a.id === 'team-1')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-1')?.alt ?? ''},
-              {id: "2", name: "Lisa Brown", role: "CTO", imageSrc: assetMap.find(a => a.id === 'team-2')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-2')?.alt ?? ''},
-              {id: "3", name: "Michael Smith", role: "Lead Developer", imageSrc: assetMap.find(a => a.id === 'team-3')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-3')?.alt ?? ''}
+              { id: "1", name: "Alex Johnson", role: "CEO", imageSrc: assetMap.find(a => a.id === 'team-1')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-1')?.alt || '' },
+              { id: "2", name: "Lisa Brown", role: "CTO", imageSrc: assetMap.find(a => a.id === 'team-2')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-2')?.alt || '' },
+              { id: "3", name: "Michael Smith", role: "Lead Developer", imageSrc: assetMap.find(a => a.id === 'team-3')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'team-3')?.alt || '' }
             ]}
           />
         </div>
       </div>
-
-      <div id="testimonial" data-section="testimonial" className={"scroll-mt-24 "+(plan.sectionStyles.testimonial?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.testimonial?.containerClasses ?? "")}>
+      <div id="testimonial" data-section="testimonial" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <TestimonialCardOne
             title="What Our Clients Say"
             description="See how our solutions have transformed businesses."
             testimonials={[
-              {id: "1", name: "Chris Evans", role: "Product Manager", company: "Tech Solutions Inc.", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-1')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-1')?.alt ?? ''},
-              {id: "2", name: "Patricia Hughes", role: "Project Lead", company: "InnovateLab", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-2')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-2')?.alt ?? ''},
-              {id: "3", name: "Ryan Lee", role: "CEO", company: "GrowthTech", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-3')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-3')?.alt ?? ''},
-              {id: "4", name: "Emily Clark", role: "CTO", company: "Enterprise Hub", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-4')?.url ?? '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-4')?.alt ?? ''}
+              { id: "1", name: "Chris Evans", role: "Product Manager", company: "Tech Solutions Inc.", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-1')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-1')?.alt || '' },
+              { id: "2", name: "Patricia Hughes", role: "Project Lead", company: "InnovateLab", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-2')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-2')?.alt || '' },
+              { id: "3", name: "Ryan Lee", role: "CEO", company: "GrowthTech", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-3')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-3')?.alt || '' },
+              { id: "4", name: "Emily Clark", role: "CTO", company: "Enterprise Hub", rating: 5, imageSrc: assetMap.find(a => a.id === 'testimonial-4')?.url || '/public/images/placeholder.webp', alt: assetMap.find(a => a.id === 'testimonial-4')?.alt || '' }
             ]}
           />
         </div>
       </div>
-
-      <div id="contact" data-section="contact" className={"scroll-mt-24 "+(plan.sectionStyles.contact?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.contact?.containerClasses ?? "")}>
+      <div id="contact" data-section="contact" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <ContactCenterForm
             title="Get In Touch"
             description="We're here to answer all your questions."
             inputs={[
-              {name: "name", type: "text", placeholder: "Name", required: true},
-              {name: "email", type: "email", placeholder: "Email", required: true}
+              { name: "name", type: "text", placeholder: "Name", required: true },
+              { name: "email", type: "email", placeholder: "Email", required: true }
             ]}
-            textarea={{name: "message", placeholder: "Message", rows: 5, required: true}}
+            textarea={{ name: "message", placeholder: "Message", rows: 5, required: true }}
             buttonText="Send Message"
           />
         </div>
       </div>
-
-      <div id="footer" data-section="footer" className={"scroll-mt-24 "+(plan.sectionStyles.footer?.wrapperClasses ?? "")}>
-        <div className={"mx-auto px-4 md:px-6 "+(plan.sectionStyles.footer?.containerClasses ?? "")}>
+      <div id="footer" data-section="footer" className="scroll-mt-24">
+        <div className="mx-auto px-4 md:px-6">
           <FooterBaseReveal
             columns={[
-              {title: "Product", items: [{label: "Features", href: "features"}, {label: "Pricing", href: "pricing"}]},
-              {title: "Company", items: [{label: "About Us", href: "about"}, {label: "Contact", href: "contact"}]}
+              { title: "Product", items: [{ label: "Features", href: "features" }, { label: "Pricing", href: "pricing" }] },
+              { title: "Company", items: [{ label: "About Us", href: "about" }, { label: "Contact", href: "contact" }] }
             ]}
             copyrightText="© 2025 SaaS Co."
           />
         </div>
       </div>
-
     </ThemeProvider>
   );
 }
